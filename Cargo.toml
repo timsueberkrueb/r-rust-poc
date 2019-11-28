@@ -1,0 +1,7 @@
+[workspace]
+members = [
+    "r-bindgen",
+    "r-internals",
+    "r-interop",
+    "example",
+]

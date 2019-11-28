@@ -1,0 +1,12 @@
+[package]
+name = "example"
+version = "0.1.0"
+authors = ["Tim Süberkrüb <dev@timsueberkrueb.io>"]
+edition = "2018"
+
+[dependencies]
+r-interop = { path = "../r-interop" }
+r-bindgen = { path = "../r-bindgen" }
+
+[lib]
+crate-type = ["cdylib"]
