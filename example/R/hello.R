@@ -37,3 +37,6 @@ print(.Call("its_a_vec", c(0, 1, 2, 3, 4, 5)))
 randv <- sample(1:64, 64)
 print(randv)
 print(.Call("rust_sort", randv))
+
+nd <- rnorm(64, mean=5, sd=1)
+print(.Call("rust_mean", nd))
