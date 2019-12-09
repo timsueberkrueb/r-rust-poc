@@ -1,0 +1,4 @@
+export(rust.sort)
+export(rust.mean)
+useDynLib(rustexample, rust_sort)
+useDynLib(rustexample, rust_mean)

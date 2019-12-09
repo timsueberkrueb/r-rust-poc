@@ -1,0 +1,8 @@
+Package: rustexample
+Type: Package
+Title: Rust-R interop example
+Version: 0.1.0
+Author: Tim Sueberkrueb
+Maintainer: Tim Sueberkrueb <dev@timsueberkrueb.io>
+Description: Rust-R interop example
+License: Apache-2.0 OR MIT

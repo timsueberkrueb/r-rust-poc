@@ -1,0 +1,15 @@
+LIBDIR = target/release
+STATLIB = $(LIBDIR)/libexample.a
+PKG_LIBS = -L$(LIBDIR) -lexample -lresolv
+
+all: clean
+
+$(SHLIB): $(STATLIB)
+
+$(STATLIB): rust
+
+rust:
+	cargo build -p example --release
+
+clean:
+	rm -Rf $(SHLIB) $(STATLIB) $(OBJECTS) target

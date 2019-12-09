@@ -1,4 +1,4 @@
-dyn.load("../target/debug/libexample.so")
+dyn.load("../target/debug/libplayground.so")
 
 print(is.loaded("hello_wrapper"))
 

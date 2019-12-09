@@ -31,7 +31,7 @@ impl SEXPType for String {
     }
 
     fn set_vector_elt(v: SEXP, idx: R_xlen_t, val: Self) {
-        unsafe { ALTSTRING_SET_ELT(v, idx, val.into_sexp()) };
+        unsafe { SET_STRING_ELT(v, idx, val.into_sexp()) };
     }
 }
 
@@ -69,7 +69,7 @@ impl SEXPType for c_int {
     }
 
     fn set_vector_elt(v: SEXP, idx: R_xlen_t, val: Self) {
-        unsafe { ALTINTEGER_SET_ELT(v, idx, val) };
+        unsafe { SET_INTEGER_ELT(v, idx, val) };
     }
 }
 
@@ -95,7 +95,7 @@ impl SEXPType for c_double {
     }
 
     fn set_vector_elt(v: SEXP, idx: R_xlen_t, val: Self) {
-        unsafe { ALTREAL_SET_ELT(v, idx, val) };
+        unsafe { SET_REAL_ELT(v, idx, val) };
     }
 }
 
@@ -121,7 +121,7 @@ impl SEXPType for bool {
     }
 
     fn set_vector_elt(v: SEXP, idx: R_xlen_t, val: Self) {
-        unsafe { ALTLOGICAL_SET_ELT(v, idx, val as c_int) };
+        unsafe { SET_LOGICAL_ELT(v, idx, val as c_int) };
     }
 }
 
